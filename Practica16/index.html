@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Practica 16</title>
+    </head>
+    <style>
+    img{
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        width: 30px;
+    }
+    h1, p, div, h2{
+        color: white;
+    }
+    .visible{
+        background-color: #5c6077;
+        width: 200px;
+        height: 65px;
+        border: 1px solid white;
+        overflow: visible;
+    }
+    .hidden{
+        background-color: #5c6077;
+        width: 200px;
+        height: 65px;
+        border: 1px solid white;
+        margin-top: 20px;
+        overflow: hidden;
+    }
+    .scroll{
+        background-color: #5c6077;
+        width: 200px;
+        height: 65px;
+        border: 1px solid white;
+        margin-top: 20px;
+        overflow: scroll;
+    }
+    .auto{
+        background-color: #5c6077;
+        width: 200px;
+        height: 65px;
+        border: 1px solid white;
+        margin-top: 20px;
+        overflow: auto;
+    }
+    .nav{
+        background-color: white;
+        list-style-type: none;
+        text-align: center;
+        margin: 0px;
+        padding: 0px;
+    }
+    .nav li{
+        display: inline-block;
+        font-size: 20px;
+        padding: 20px;
+    }
+    .nav li:hover{
+        font-size: 25px;
+        color: #474c69;
+    }
+    .nav li a{
+        color: #202a6d;
+        text-decoration: none;
+    }
+    .hover p{
+        display: none;
+        background-color: yellow;
+        color: black;
+        padding: 20px;
+    }
+    .hover:hover p{
+        display: block;
+    }
+</style>
+    <body style="background-color: #202a6d;">
+        <ul class="nav">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#acercaDe">Acerca de</a></li>
+            <li><a href="#clientes">Clientes</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <h1>Z-Index</h1>
+        <img src="./images/siiaa.png" alt="upsinlogo">
+        <p>esta imagen está detras del texto</p>
+        <hr>
+        <h1>Overflow</h1>
+        <hr>
+        <h2>Visible</h2>
+        <div class="visible">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+            labore quos nihil in sunt autem temporibus qui. Explicabo corporis
+            minus accusamus accusantium quas pariatur aperiam quos iste neque,
+            delectus velit.
+        </div>
+        <br><br><br><br>
+        <hr>
+        <h2>Hidden</h2>
+        <div class="hidden">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+            labore quos nihil in sunt autem temporibus qui. Explicabo corporis
+            minus accusamus accusantium quas pariatur aperiam quos iste neque,
+            delectus velit.
+        </div>
+        <hr>
+        <h2>Scroll</h2>
+        <div class="scroll">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+            labore quos nihil in sunt autem temporibus qui. Explicabo corporis
+            minus accusamus accusantium quas pariatur aperiam quos iste neque,
+            delectus velit.
+        </div>
+        <hr>
+        <h2>Auto</h2>
+        <div class="auto">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+            labore quos nihil in sunt autem temporibus qui. Explicabo corporis
+            minus accusamus accusantium quas pariatur aperiam quos iste neque,
+            delectus velit.
+        </div>
+        <hr>
+        <div class="hover">
+            Elemento con clase hover
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta
+                illo quibusdam laudantium iste, ad eveniet quam modi et laborum
+                sed, numquam ipsa. Cupiditate natus laboriosam vitae incidunt
+                suscipit quas ratione.
+            </p>
+        </div>
+        <hr>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt nesciunt doloribus sit saepe qui ad ullam magnam cum perferendis minus autem, ducimus labore dolores corrupti, obcaecati ipsum ea repellat distinctio!</p>
+    </body>
+</html>

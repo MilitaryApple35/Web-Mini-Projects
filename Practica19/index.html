@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 19</title>
+</head>
+<style>
+    td, th, tr, table{
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 5px;
+        background-color: rgb(175, 253, 227);
+        text-align: center;
+    }
+    th{
+        background-color: aquamarine;
+    }
+    div{
+        display: grid;
+        place-items: center;
+        margin: auto;
+    }
+    input, button{
+        display: grid;
+        place-items: center;
+        margin: auto;
+        margin-bottom: 5px;
+        background-color: rgb(175, 253, 227);
+    }
+    p{
+        color: red;
+    }
+    .hidden{
+        display: none;
+    }
+</style>
+<body>
+    <h1>Tabla JavaScript</h1>
+    <div>
+        <label for="multiplicando">Multiplicando</label>
+        <input type="text" id="multiplicando">
+        <button type="button" onclick="mostrarTabla()" id="button">Mostrar tabla</button>
+        <p class="hidden" id="error">El multiplicador no puede ser 0 ni estar vacio</p>
+        <table>
+            <tr>
+                <th>Multiplicando</th>
+                <th>Multiplicador</th>
+                <th>Resultado</th>
+            </tr>
+            <tbody id="bodytable">
+                <tr>
+    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+<script>
+    function mostrarTabla(){
+        if(isNaN(document.getElementById('multiplicando').value)  || parseInt(document.getElementById('multiplicando').value) !=0){
+            let bodyTable=``;
+            const multiplicador = parseInt(document.getElementById('multiplicando').value);
+            for(let i=0; i<=10; i++){
+                bodyTable+=`
+                    <tr>
+                        <td>${multiplicador}</td>
+                        <td>${i}</td>
+                        <td>${multiplicador * i}</td>
+                    </tr>
+                `;
+            }
+            console.log()
+            document.getElementById("bodytable").innerHTML = bodyTable;
+            document.getElementById("bodytable").classList.remove('hidden');
+        }
+        else{
+            document.getElementById("bodytable").classList.add('hidden');
+            document.getElementById('error').classList.remove('hidden');
+        }
+    }
+    document.getElementById('multiplicando').addEventListener('keydown', function(event){
+        if(event.keyCode === 13){
+            document.getElementById('button').click();
+        }
+    })
+</script>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 17</title>
+</head>
+<style>
+    img{
+        opacity: 0.5;
+        transition: opacity 1s;
+    }
+    img:hover{
+        opacity: 1;
+    }
+    .transition{
+        width: 100px;
+        height: 100px;
+        font-size: 0;
+        background-color: cadetblue;
+        transition: width 1.5s, height 2s, font-size 2s;
+        text-align: center;
+    }
+    .transition:hover{
+        width: 100%;
+        height: 300px;
+        font-size: 100px;
+    }
+    .transition div marquee{
+        font-size: 0px;
+    }
+</style>
+<body>
+    <h1>Opacity</h1>
+    <img src="./img/paisaje1.jpg" alt="" width="300px" height="150px">
+    <img src="./img/paisaje2.jpg" alt="" width="300px" height="150px">
+    <img src="./img/paisaje3.jpg" alt="" width="300px" height="150px">
+    <hr>
+    <div class="transition">
+        <h1>Transición</h1>
+    </div>
+</body>
+</html>

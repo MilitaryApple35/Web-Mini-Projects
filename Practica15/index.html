@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 15</title>
+</head>
+<style>
+    h1{
+        text-align: center;
+    }
+    .static{
+        position: static;
+        border: 3px solid #73ad21;
+    }
+    .relative{
+        position: relative;
+        border: 3px solid #73ad21;
+        left: 30px;
+    }
+    .fixed{
+        position: fixed;
+        border: 3px solid #73ad21;
+        bottom: 0;
+        right: 0;
+    }
+    .absolute{
+        position: absolute;
+        border: 3px solid #73ad21;
+        top: 80px;
+        right: 0px;
+        width: 200px;
+        height: 100px;
+    }
+    .sticky{
+        position: -webkit-sticky;
+        position: sticky;
+        border: 3px solid #73ad21;
+        background-color: #cae8ca;
+        padding: 5px;
+        top: 100px;
+    }
+</style>
+<body>
+    <h1>Position</h1>
+    <p class="static">Elemento con position static</p>
+    <hr>
+    <p class="relative">Elemento con position relative</p>
+    <hr>
+    <div class="fixed">Elemento con position fixed</div>
+    <hr>
+    <marquee behavior="alternate" direction="right">
+        <div class="relative" style="width: 400px;height: 200px;">
+            Elemento con position relative
+            <div class="absolute">Elemento con position absolute</div>
+        </div>
+    </marquee>
+    <hr>
+    <div class="sticky">Esto es un elemento sticky</div>
+    <div style="padding-top: 2000px;">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos beatae debitis amet odit dolore. Omnis quaerat, at aspernatur veritatis velit molestiae culpa sint, sit excepturi, assumenda voluptatum optio mollitia laudantium?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos beatae debitis amet odit dolore. Omnis quaerat, at aspernatur veritatis velit molestiae culpa sint, sit excepturi, assumenda voluptatum optio mollitia laudantium?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos beatae debitis amet odit dolore. Omnis quaerat, at aspernatur veritatis velit molestiae culpa sint, sit excepturi, assumenda voluptatum optio mollitia laudantium?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos beatae debitis amet odit dolore. Omnis quaerat, at aspernatur veritatis velit molestiae culpa sint, sit excepturi, assumenda voluptatum optio mollitia laudantium?</p>
+    </div>
+</body>
+</html>

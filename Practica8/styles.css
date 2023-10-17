@@ -1,0 +1,43 @@
+body{
+    background-color: rgba(0, 0, 0, 0.668);
+}
+h1{
+    color: rgba(170, 202, 191, 0.922);
+    font-size: 100px;
+    text-align: center;
+    border: 1px solid color black;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+h2{
+    color: rgba(78, 203, 159, 0.922);
+    font-size: 60px;
+    text-align: center;
+    border: 1px solid color black;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+p{
+    font-family: 'Segoe UI';
+    font-style: italic;
+    color: rgb(80, 203, 203);
+    text-align: center;
+}
+#parrafo1{
+    color: bisque;
+}
+p.clase_parrafo{
+    color: rgb(136, 228, 136);
+}
+/* Iban tomando cerveza
+Su compañero le dijo
+Nos sigue una camioneta
+Lamberto sonriendo dijo
+Pa que son las metralletas
+ */

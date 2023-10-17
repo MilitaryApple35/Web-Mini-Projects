@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es ">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 18</title>
+</head>
+<script>
+    function insertar(){
+        document.getElementById('parrafo4').innerHTML= 'Mensaje de prueba';
+    }
+    function sumar(){
+        let num1 = parseInt(document.getElementById('num1').value);
+        let num2 = parseInt(document.getElementById('num2').value);
+        let suma = num1 + num2;
+        document.getElementById('resultado').innerHTML= suma;
+    }
+    function sumarDos(){
+        
+    }
+    function validarPassword(){
+        const password= 'upsin';
+        const valor= document.getElementById('password').value;
+        if(valor === password){
+            window.location.href = 'https://upsin.edu.mx/';
+        }
+        else{
+            alert("Contraseña invalida");
+        }
+    }
+    function concatenar(){
+        const nombre = document.getElementById('nombre').value;
+        const apellidoPaterno = document.getElementById('apellidoPaterno').value;
+        const apellidoMaterno =document.getElementById('apellidoMaterno').value;
+        const nombreCompleto = `Hola ${nombre} ${apellidoPaterno} ${apellidoMaterno}`
+        //const nombreCompleto = nombre + " " + apellidoPaterno + " " + apellidoMaterno;
+        console.log(nombreCompleto);
+    }
+</script>
+<body>
+    <h1>Javascript</h1>
+    <button type="button" onclick="document.getElementById('parrafo').innerHTML= Date()">
+        Click para mostrar la fecha y la hora
+    </button>
+    <p id="parrafo">Parrafo</p>
+    <hr>
+    <div style="width: 100%; height: 100px; align-content: center;">
+        <p id="parrafo2">Mensaje de prueba</p>
+    </div>
+    <button type="button" onclick="document.getElementById('parrafo2').style.fontSize='35px'">Click+</button>
+    <button type="button" onclick="document.getElementById('parrafo2').style.fontSize='10px'">Click-</button>
+    <hr>
+    <div style="width: 100%; height: 100px; align-content: center;">
+        <p id="parrafo3">Mensaje de prueba</p>
+    </div>
+    <button type="button" onclick="document.getElementById('parrafo3').style.display='none'">Ocultar</button>
+    <button type="button" onclick="document.getElementById('parrafo3').style.display= 'block'">Mostrar</button>
+    <hr>
+    <p id="parrafo4">A</p>
+    <button type="button" onclick="insertar()">Cambiar mensaje</button>
+    <hr>
+    <input type="number" id="num1">
+    <input type="number" id="num2">
+    <p style="display: inline;">Resultado: </p>
+    <p id="resultado" style="display: inline;">0</p>
+    <button style="display: block;" type="button" onclick="sumar()">Resultado</button>
+    <hr>
+    <label for="" id="blue">Numero 1</label><br>
+    <input type="text" id="n1"><br>
+    <label for="" id="red">Numero 2</label><br>
+    <input type="text" id="n2"><br>
+    <button style="display: block;" type="button" onclick="sumarDos()">Resultado</button>
+    <hr>
+    <input type="password" id="password"><br>
+    <button type="button" onclick="validarPassword()">Verificar</button>
+    <hr>
+    <label for="">Nombre:</label><br>
+    <input type="text" id="nombre">
+    <label for="">Apellido Paterno:</label><br>
+    <input type="text" id="apellidoPaterno">
+    <label for="">Apellido Materno:</label><br>
+    <input type="text" id="apellidoMaterno">
+    <button type="button" onclick="concatenar()">Concatenar</button>
+</body>
+</html>
